@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <script>
+
+        let model = {
+            sarees:[
+                {
+                   image:'dresses/saree1.jpg',
+                   name:'Kanchipuram Art Silk Saree',
+                   price:'Price : ₹ 2,500',
+                   discount:'Discount : 25% (Inclusive of all taxes)',
+                   list:['Colour : Navy Blue','Saree Length : 5.5m','Blouse Length : 0.8m','Saree Nature : Soft & Shinning']
+                },
+                {
+                   image:'dresses/saree2.jpg',
+                   name:'Florence cotton Silk Heavy Lace Work',
+                   price:'Price : ₹ 999',
+                   discount:'Discount : 18% (Inclusive of all taxes)',
+                   list:['Colour : Yellow and Navy Blue','Saree Length : 5.5m','Blouse Length : 0.8m','Saree Nature : Pure soft cotton silk']
+                },
+                {
+                   image:'dresses/saree3.jpg',
+                   name:'printed Georgette Lehenga Choli',
+                   price:'Price : ₹ 2,000',
+                   discount:'Discount : 30% (Inclusive of all taxes)',
+                   list:['Fabric : Georgette','Lehenga Type : stitched','Work : Gota work','Dupatta Color : Pink','Blouse Sleeve : Half Sleeves']
+                },
+                {
+                   image:'dresses/saree4.jpg',
+                   name:'Rajeshree silk Wedding Wear Saree',
+                   price:'Price : ₹ 1,300',
+                   discount:'Discount : 26% (Inclusive of all taxes)',
+                   list:['Colour : Green','Saree Length : 5.5m','Blouse Length : 0.8m','Saree Nature : Silky Fabric']
+                },
+                {
+                   image:'dresses/saree5.jpg',
+                   name:'Nakshatra Tex Banarasi Silk Saree',
+                   price:'Price : ₹ 1,149',
+                   discount:'Discount : 55% (Inclusive of all taxes)',
+                   list:['Colour : Firozi','Saree Length : 5.5m','Blouse Length : 0.8m','Saree Nature : Woven Zari Design']
+                },
+                {
+                   image:'dresses/saree6.jpg',
+                   name:'Elina Fashion Banarasi Art Silk Saree',
+                   price:'Price : ₹ 1,859',
+                   discount:'Discount : 15% (Inclusive of all taxes)',
+                   list:['Colour : Off White','Saree Length : 5.5m','Blouse Length : 0.8m','Saree Nature : Woven Saree Work']
+                },
+                {
+                   image:'dresses/saree7.jpg',
+                   name:'Vardan Ethnic Chinnon Embroided Saree',
+                   price:'Price : ₹ 1,499',
+                   discount:'Discount : 59% (Inclusive of all taxes)',
+                   list:['Colour : Golden','Saree Length : 5.5m','Saree Width :1.10m','Blouse Length : 0.8m','Saree Nature : Heavy Embroiderey']
+                },
+                {
+                   image:'dresses/saree8.jpg',
+                   name:'Anni Designer Chanderi Embroided Saree',
+                   price:'Price : ₹ 500',
+                   discount:'Discount : 83% (Inclusive of all taxes)',
+                   list:['Colour : Magneta','Saree Length : 5.5m','Blouse Length : 0.8m','Saree Nature : Soft & Comfortable']
+                },
+                {
+                   image:'dresses/saree9.jpg',
+                   name:'Anni Designer Jacquard Butta saree',
+                   price:'Price : ₹ 900',
+                   discount:'Discount : 81% (Inclusive of all taxes)',
+                   list:['Colour : Light Pink','Saree Length : 5.5m','Blouse Length : 0.8m','Saree Nature : Silky & Shinning']
+                },
+                {
+                   image:'dresses/saree10.jpg',
+                   name:'Varakala Paithani Peacock Design Saree',
+                   price:'Price : ₹ 1,499',
+                   discount:'Discount : 70% (Inclusive of all taxes)',
+                   list:['Colour : Golden Peacock Blue','Saree Length : 5.5m','Blouse Length : 0.8m','Saree Nature : Lightweight & Smooth Texture']
+                },
+            ]
+        };
+   var design = model['sarees'];
+   
+   var header = document.createElement("header");
+   var img = document.createElement("img");
+   img.setAttribute("src","logo.jpeg");
+   img.setAttribute("alt","logo");
+   img.setAttribute("height","90px");
+   img.setAttribute("width","90px");
+   header.append(img);
+   var Content = document.createTextNode("Shopping Sales");
+   header.appendChild(Content);
+   document.body.appendChild(header);
+ 
+   var section = document.createElement("section");
+   section.classList.add("products");
+   document.body.appendChild(section);
+
+   for(var i=0; i<design.length;i++)
+   {
+      var item =document.createElement("div");
+      item.classList.add("item");
+      section.append(item);
+
+      var img = document.createElement("img");
+      img.setAttribute("src",design[i].image);
+      img.setAttribute("alt",design[i].name);
+      img.setAttribute("height","350px");
+      img.setAttribute("width","180px");
+      item.append(img);
+
+      var details = document.createElement("div");
+      details.classList.add("details");
+      item.append(details);
+
+      var title = document.createElement("p");
+      var Content = document.createTextNode(design[i].name);
+      title.classList.add("title");
+      title.appendChild(Content);
+      details.append(title);
+ 
+      var price = document.createElement("p");
+      var Content = document.createTextNode(design[i].price);
+      price.classList.add("price");
+      price.appendChild(Content);
+      details.append(price);
+
+      var discount = document.createElement("p");
+      var Content = document.createTextNode(design[i].discount);
+      discount.classList.add("discount");
+      discount.appendChild(Content);
+      details.append(discount);
+
+      var ul = document.createElement('ul');
+      details.appendChild(ul);
+
+      design[i].list.forEach(function(name){
+         var li =document.createElement("li");
+         ul.appendChild(li);
+         var i = document.createElement("i");
+         i.classList.add("fa");
+         i.classList.add("fa-check");
+         li.append(i);
+         li.innerHTML += name;
+      });
+
+      var button = document.createElement("button");
+      button.innerHTML = "BUY NOW";
+      details.append(button);
+
+   }
+ </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    color:#e6004c;
+    margin: 1%;
+    padding: 1%;
+    box-shadow: 0 8px 8px -8px black;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center; 
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    border: 1px solid #c6cacf;
+}
+.item:hover{
+    border: 1px solid #c6cacf;
+    box-shadow: 0 8px 8px -8px black;
+}
+.details{
+    text-align:left;
+    flex-direction:column;
+    margin: 1%;
+    padding: 2%;
+}
+.title{
+    font-weight: bold;
+    color:#e6004c;
+    font-size: 20px;
+}
+.price{
+    font-weight: bold;
+    font-size: 25px;
+}
+.discount{
+    font-size:20px;
+}
+ul{
+    list-style-type: none;
+    padding-top:10px;
+    font-size:17px
+}
+.fa{
+    color:#00ffcc;
+}
+button{
+    margin-top:5px;
+    margin-left: 20px;
+    background-color:#6c757d;
+    color:#fff;
+    border-radius: 20px;
+    padding:10px 95px;
+    border:2px solid #fff;
+    font-weight:bold;
+    cursor: pointer;
+}
+button:hover{
+    border:2px solid #c6cacf
+}
+
+/*----------------------small scale devices-------------------*/
+
+@media only screen and (min-width: 350px) and (max-width:480px)
+{
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 96%;
+        margin: 1%;
+        padding: 1%;
+        text-align: center;
+        border: 1px solid #c6cacf;
+    }
+    
+}
+
+/*---------------medium scale devices----------------*/
+
+
+@media only screen and (min-width: 481px) and (max-width:1025px) 
+{
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 96%;
+        margin: 1%;
+        padding: 1%;
+        text-align: center;
+        border: 1px solid #c6cacf;
+    }
+    
+}
+
+/*-------*/
+
+@media only screen and (min-width: 280px) and (max-width:660px) 
+{
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 96%;
+        margin: 1%;
+        padding: 1%;
+        text-align: center;
+        border: 1px solid #c6cacf;
+    }
+    
+}
+
+
